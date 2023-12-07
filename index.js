@@ -6,7 +6,7 @@ function inserir(){
     var endereco = document.getElementById("endereco");
     var setor = document.getElementById("setor");
     var funcao = document.getElementById("funcao");
-
+    //Cria o Objeto
     var funcionario = {};
 
     funcionario.nome = nome.value;
@@ -28,7 +28,7 @@ function inserir(){
     }else if (funcionario.funcao == ""){
         window.alert("Preencha os campo Função")
     }
-    else{
+    else{ //Insere os dados no objeto
         itens.push(funcionario);
 
         nome.value = "";
@@ -46,11 +46,11 @@ function inserir(){
 }
 
 function listar(){
-    //var x = document.getElementById("x")
+    
     var tabela = document.getElementById("tabela");
     tabela.innerHTML="";
-    //x.src = "img/panda.jpg"
-
+    
+    //cria a tabela
     tabela.innerHTML += "<th>Nome</th><th>Idade</th><th>Endereço</th><th>Setor</th><th>Função</th><th>Excluir</th>"
     for (var i in itens){
         tabela.innerHTML += "<tr><td>"
